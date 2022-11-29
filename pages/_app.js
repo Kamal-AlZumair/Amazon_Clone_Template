@@ -5,7 +5,7 @@ import {store} from '../app/store'
 
 function MyApp({ Component, pageProps: { session, ...pageProps } }) {
 	return (
-		<SessionProvider session={session} basePath="/CheckOut/api/auth" >
+		<SessionProvider session={session} >
 			<Provider store={store}>
 				<Component {...pageProps} />
 			</Provider>
