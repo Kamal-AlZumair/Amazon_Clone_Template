@@ -8,10 +8,15 @@ import CheckoutProduct from "../components/CheckoutProduct";
 import {useSession} from 'next-auth/react'
 
 
+
+
+
 const CheckOut = () => {
 	const { data: session } = useSession()
 	const items = useSelector(selectItems)
 	const total = useSelector(selectTotal)
+
+	
 	return (
 		<div className=" bg-gray-100">
 			<Header />
@@ -52,7 +57,7 @@ const CheckOut = () => {
 								${total.toFixed(2)}
 							</span>
 							</h2>
-							<button disabled={!session} className={`button mt-2 ${!session && 'from-gray-300 to-gray-500 border-gray-200 text-gray-300 cursor-not-allowed'} `}>
+							<button  role='link' disabled={!session} className={`button mt-2 ${!session && 'from-gray-300 to-gray-500 border-gray-200 text-gray-300 cursor-not-allowed'} `}>
 								{!session ? 'Sign in to checkout' : 'Proceed to checkout'}
 							</button>
 						</>

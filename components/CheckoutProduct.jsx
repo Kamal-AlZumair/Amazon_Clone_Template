@@ -36,7 +36,7 @@ const CheckoutProduct = ({
 
   return (
     <div className=' grid grid-cols-5'>
-      <Image src={image} height={200} width={200} className='object-contain'/>
+      <Image src={image} height={100} width={100} className='object-contain'/>
 
       <div className=' col-span-5 md:col-span-3 mx-5'>
         <p>{title}</p>
@@ -62,9 +62,9 @@ const CheckoutProduct = ({
           )}
       </div>
       {/* right add/remove buttons */}
-      <div className=' col-span-5 md:col-span-1 my-4 md:flex md:flex-col'>
-      <div className=' flex md:flex-col md:space-y-2 mx-auto md:my-auto md:justify-self-end'>
-        <button onClick={addItemToBasket} className=' button mr-4'>Add to Basket</button>
+      <div className=' col-span-5 md:col-span-1 my-4  mx-auto'>
+      <div className=' flex md:flex-col gap-4 md:space-y-2 mx-auto md:my-auto md:justify-self-end'>
+        <button onClick={addItemToBasket} className=' button  md:mr-0'>Add to Basket</button>
         <button onClick={removeItemFromBasket} className=' button'>Remove from Basket</button>
       </div>
       </div>
